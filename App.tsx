@@ -5,7 +5,10 @@ const App = () => {
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
-        <Text>Hello, world test</Text>
+        <Text style={styles.text}>Hello, world test</Text>
+        <View style={styles.cyanBox}>
+          <Text style={styles.boxtText}>Cyan</Text>
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -13,15 +16,26 @@ const App = () => {
 
 const styles = StyleSheet.create({
   container: {
-    paddingVertical: 30,
-    paddingHorizontal: 20,
-    backgroundColor: "peru",
-    alignItems: "center",
-    justifyContent: "center",
-    flex: 1
+    paddingTop: 10,
+    paddingHorizontal: 20
+  },
+  text: {
+    fontSize: 18,
+    fontWeight: "bold",
+    paddingTop: 40
   },
   safeArea: {
     flex: 1
+  },
+  cyanBox: {
+    backgroundColor: "#2aa198",
+    padding: 10,
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  boxText: {
+    color: "white",
+    fontWeight: "bold"
   }
 });
 export default App;
